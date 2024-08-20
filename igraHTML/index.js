@@ -1,5 +1,5 @@
 //POVEZIVANJE NA KANAL
-let server = io("3.125.183.140:5000")
+let server = io("https://xox-hw1k.onrender.com/")
 
 server.emit("ucPP")
 
