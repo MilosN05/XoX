@@ -1,6 +1,6 @@
 ///POVEZIVANJE NA KANAL SERVERA
 
-const server = io("https://xox-hw1k.onrender.com/")
+const server = io("https://xox-hw1k.onrender.com")
 
 
 //ucitavanje osn stvari

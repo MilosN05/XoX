@@ -1,5 +1,5 @@
 //POVEZIVANJE NA KANAL
-let server = io("https://xox-hw1k.onrender.com/")
+let server = io("https://xox-hw1k.onrender.com")
 
 server.emit("ucPP")
 
@@ -62,6 +62,17 @@ server.on("pobednik", (podaci)=> {
         }, 4000)
     }
 
+
+    else if(podaci && provera==9 ) {
+        server.disconnect()
+
+        setTimeout(() => {
+            window.location.pathname = "/"
+        }, 4000);
+
+        window.alert("NERESENO! NOVA IGRA ZA 4 SEKUNDE!")
+    }
+
     else {
         server.disconnect()
         setTimeout(() => {
@@ -96,6 +107,7 @@ console.log(drugiIgrac)
 
 
 let pobednik = 0
+let provera = 0
 
 
 function igra() {
@@ -202,11 +214,55 @@ function igra() {
         server.emit("pobednik", true)
         pobednik = 1
     }
-    
+
+
+    proveraPG()
+
+
+    if (provera == 9) {
+
+
+
+        server.emit("pobednik", true)
+
+
+    }
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+///DODATNE FUNKCIJE
+
+
+
+function proveraPG() {
+    let pPolja = 0
+    for (let i=0; i<divS.length; i++) {
+        if (divS[i].innerHTML != "" && pobednik == 0) {
+            pPolja += 1
+        }
+    }
+
+    if (pPolja == 9) {
+        provera = pPolja
+    }
     
+}
 
 
 

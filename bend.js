@@ -30,7 +30,6 @@ let js = path.join(__dirname, "/igraHTML", "/index.js")
 
 let dodeljivanjeVrednosti = []
 let ucitaniKorisnici = 0
-let pPotezOdredjen = 0
 let broj1 = 0
 
 
@@ -86,12 +85,11 @@ socket.on("connection", (korisnik)=>{
 
         korisnik.on("pobednik", (podaci)=> {
             socket.emit("pobednik", podaci)
-            pPotezOdredjen = 0
         })
 
 
 
-        if (dodeljivanjeVrednosti.length == 0 && pPotezOdredjen== 0) {
+        if (dodeljivanjeVrednosti.length == 0) {
             dodeljivanjeVrednosti.push(1)
             console.log(dodeljivanjeVrednosti) 
         }
