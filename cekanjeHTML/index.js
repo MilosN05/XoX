@@ -1,6 +1,6 @@
 ///POVEZIVANJE NA KANAL SERVERA
 
-const server = io("192.168.0.23:5000")
+const server = io("3.125.183.140:5000")
 
 
 //ucitavanje osn stvari
