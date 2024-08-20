@@ -1,5 +1,5 @@
 //POVEZIVANJE NA KANAL
-let server = io("192.168.0.23:5000")
+let server = io("3.125.183.140:5000")
 
 server.emit("ucPP")
 
