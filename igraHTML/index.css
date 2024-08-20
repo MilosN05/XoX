@@ -1,0 +1,47 @@
+body {
+    background-color: #3b424b;
+    text-align: center;
+}
+
+.prvired {
+    
+    display: inline-block;
+    overflow: auto;
+    width: 100px;
+    height: 100px;
+    
+    background-color: bisque;
+    margin-top: 10%;
+}
+
+#test {
+    width: 100%;
+    height: 100%;
+}
+
+.drugired {
+    
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    overflow: auto;
+    
+    background-color: bisque;
+}
+
+.trecired {
+    
+    display: inline-block;
+
+    width: 100px;
+    height: 100px;
+   
+    overflow: auto;
+    background-color: bisque;
+}
+
+.ddd {
+    padding-left: 0px;
+    padding-top: 25px;
+    font-size: 20px;
+}
