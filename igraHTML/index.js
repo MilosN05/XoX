@@ -67,10 +67,22 @@ server.on("pobednik", (podaci)=> {
         server.disconnect()
 
         setTimeout(() => {
+            
+
             window.location.pathname = "/"
+            console.log(window.location.pathname)
         }, 4000);
 
-        window.alert("NERESENO! NOVA IGRA ZA 4 SEKUNDE!")
+        setTimeout(() => {          ///WINDOW SAM TAKODJE MORAO STAVITI U SET TIMEOUT, ZATO STO
+                                    ///NEZAVISNO OD TOGA KOLIKO KODOVA JA IMAO PRE WINDOW.ALERT
+                                    ///ON CE UVEK, BOGA PITAJ ZASTO, IZVRSITI WINDOW ALERT A ONDA KRENUTI OD POCETKA DO KRAJA PO REDU
+                                    //I SAD DA SAM JA OSTAVIO TAKO KAKO JE BILO OVAJ DRUGI KORISNIK BI SE ODVEZAO I POVEZAO NA DRUGI SERVER
+                                    // A OVAJ PRVI JOS NIJE ODVEZAN STOGA BICE UKUPNO 2 IGRACA UMESTO SAMO 1 PRISUTNOG A TO POSLE MOZE IZAZVATI
+                                    //PROBLEME!
+            window.alert("test")
+        }, 0);
+        
+        
     }
 
     else {
@@ -80,6 +92,10 @@ server.on("pobednik", (podaci)=> {
             window.location.pathname = "/"
             
         }, 4000);
+
+        setTimeout(() => {
+            window.alert("izgubio si")
+        }, 0);
     }
 })
 
@@ -96,8 +112,6 @@ server.on("pobednik", (podaci)=> {
 window.onclick = function() {
     igra()
 }
-
-console.log(window)
 
 // let prviIgrac = nizP[0]
 // let drugiIgrac = nizP[1]
@@ -150,9 +164,7 @@ function igra() {
                 server.emit("pPotez", 1)
                 
                 drugiIgrac -= 1
-                
-
-                
+                       
        }
             else {
                 divS[i].removeEventListener("click", dodavanjeOx)
@@ -263,18 +275,3 @@ function proveraPG() {
     }
     
 }
-
-
-
-// function izborPPoteza() {
-//     let broj1 = Math.floor(Math.random()*2)
-//     let broj2 = Math.floor(Math.random()*2)
-//     while (broj1 == broj2) {
-//         broj1 = Math.floor(Math.random()*2)
-//         broj2 = Math.floor(Math.random()*2)
-
-//     }
-//     nizP.push(broj1)
-//     nizP.push(broj2)
-// }
-

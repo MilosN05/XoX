@@ -30,3 +30,45 @@
 
 
 // broj = 1
+
+
+
+let burek = function() {
+
+
+    setInterval(()=> {
+        console.log("etst")
+    }, 3000)
+
+    setInterval(() => {
+        console.log("blaaaa")
+    }, 4000);
+
+
+    
+    window.alert("test") ///OBUSTAVLJA SVE UVEK, GDE GOD SE NALAZIO, SAMO KADA JE PRVI NA REDU, ONDA ZAUSTAVLJA CITANJE I IZVRSAVANJE SVEGA OSTALOG
+                            // A KAD JE NA KRAJU NE OBUSTAVLJA CITANJE KODA ALI OBUSTAVJA NJEGOVO KRAJNJE IZVRSAVANJE
+
+
+   
+    
+}
+
+// burek()
+
+
+
+
+// PRIMER 2
+
+function test() {
+    console.log(2+2)
+}
+
+
+function bla() {
+    test()
+            //PROVERI ZASTO OVO FUNKCINOSE
+
+}
+
