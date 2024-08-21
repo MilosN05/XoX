@@ -1,6 +1,7 @@
 body {
     background-color: #3b424b;
     text-align: center;
+    user-select: none;
 }
 
 .prvired {
